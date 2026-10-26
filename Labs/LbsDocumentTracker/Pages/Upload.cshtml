@@ -1,0 +1,29 @@
+@page
+@model UploadModel
+@{
+    ViewData["Title"] = "Submit document";
+}
+<h1>Submit a fictional document</h1>
+<p class="lead">Only a small UTF-8 plain-text (.txt) file is accepted. The content is processed in memory and is not saved or logged.</p>
+<p>Use a fictional file from <code>SampleData</code>. Its header must contain
+    <code>FictionalData: true</code>, <code>Reference</code>, <code>Applicant</code>
+    and <code>DocumentType</code>, followed by a blank line and body.
+    Match the form reference to the file. Valid types are <code>ApplicationSummary</code>
+    and <code>SupportingStatement</code>. Incorrect business fields produce
+    <strong>Needs review</strong>, not a technical failure.</p>
+<div asp-validation-summary="ModelOnly" class="validation" role="alert"></div>
+<form method="post" enctype="multipart/form-data">
+    <div class="field">
+        <label asp-for="Reference">Fictional reference</label>
+        <input asp-for="Reference" autocomplete="off" placeholder="LBS-DEMO-1234" />
+        <span asp-validation-for="Reference" class="validation"></span>
+        <small>Format: LBS-DEMO- followed by four digits.</small>
+    </div>
+    <div class="field">
+        <label asp-for="Upload">Text file</label>
+        <input asp-for="Upload" type="file" accept=".txt,text/plain" />
+        <span asp-validation-for="Upload" class="validation"></span>
+        <small>Maximum size: 32 KiB. Text only; invalid UTF-8 and control characters are rejected.</small>
+    </div>
+    <button class="button" type="submit">Queue local demo processing</button>
+</form>

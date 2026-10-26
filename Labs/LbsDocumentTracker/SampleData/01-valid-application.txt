@@ -1,0 +1,7 @@
+FictionalData: true
+Reference: LBS-DEMO-1001
+Applicant: Example Applicant Alpha
+DocumentType: ApplicationSummary
+
+This is a fictional training application for a savings account.
+No real customer, account, address or financial information is included.
