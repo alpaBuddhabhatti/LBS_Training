@@ -1,0 +1,22 @@
+[
+  {
+    "file": "01-valid-application.txt",
+    "reference": "LBS-DEMO-1001",
+    "expectedStatus": "Completed"
+  },
+  {
+    "file": "02-missing-document-type.txt",
+    "reference": "LBS-DEMO-1002",
+    "expectedStatus": "Needs review"
+  },
+  {
+    "file": "03-reference-mismatch.txt",
+    "reference": "LBS-DEMO-1003",
+    "expectedStatus": "Needs review"
+  },
+  {
+    "file": "04-unsupported-document-type.txt",
+    "reference": "LBS-DEMO-1004",
+    "expectedStatus": "Needs review"
+  }
+]

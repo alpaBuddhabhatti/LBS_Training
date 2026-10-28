@@ -1,0 +1,7 @@
+.copilot-azure/
+bin/
+obj/
+publish/
+.vs/
+local.settings.json
+*.user

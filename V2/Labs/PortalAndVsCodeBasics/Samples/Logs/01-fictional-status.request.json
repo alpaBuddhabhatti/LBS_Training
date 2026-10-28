@@ -1,0 +1,4 @@
+{
+  "query": "// In-memory fictional rows: this does not ingest data or read Function telemetry.\ndatatable(Reference:string, Status:string)\n[\n    \"LBS-DEMO-1001\", \"Completed\",\n    \"LBS-DEMO-1002\", \"Needs review\",\n    \"LBS-DEMO-1003\", \"Received\"\n]\n| order by Reference asc",
+  "timespan": "PT24H"
+}
