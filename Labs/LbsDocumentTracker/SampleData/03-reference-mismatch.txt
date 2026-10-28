@@ -1,7 +1,0 @@
-FictionalData: true
-Reference: LBS-DEMO-9999
-Applicant: Example Applicant Gamma
-DocumentType: ApplicationSummary
-
-Submit this file with form reference LBS-DEMO-1003.
-Expected outcome: Needs review because the references differ.
