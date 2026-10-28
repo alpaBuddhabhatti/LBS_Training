@@ -1,0 +1,10 @@
+// LIVE APPLICATION INSIGHTS RESOURCE SCOPE: confirm this component in the portal.
+// In a shared/cross-resource scope, add the approved app filter before using this query.
+let Requests = requests
+| where timestamp > ago(2h)
+| project TimeGenerated=timestamp, Name=name, Success=success, ResultCode=resultCode,
+    DurationMs=duration / 1ms, OperationId=operation_Id;
+Requests
+| where Success == false
+| project TimeGenerated, Name, ResultCode, DurationMs, OperationId
+| order by TimeGenerated asc

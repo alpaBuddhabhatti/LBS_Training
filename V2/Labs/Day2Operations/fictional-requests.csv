@@ -1,0 +1,6 @@
+TimeGenerated,Name,Success,ResultCode,DurationMs,OperationId
+2026-10-28T10:00:00Z,GET /health,True,200,120,op-001
+2026-10-28T10:01:00Z,GET /api/items,True,200,180,op-002
+2026-10-28T10:02:00Z,POST /documents,False,500,5200,op-003
+2026-10-28T10:03:00Z,GET /api/items,True,200,4800,op-004
+2026-10-28T10:04:00Z,GET /private-status,False,401,90,op-005

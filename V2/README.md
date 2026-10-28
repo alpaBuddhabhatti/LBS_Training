@@ -7,6 +7,9 @@ Download or clone the whole repository and keep the V2 folder structure intact.
 Download Word, PowerPoint and PDF files before opening them; GitHub's file viewer
 is not a substitute for Word/PowerPoint and may not follow local document links.
 
+Both days run **09:45-17:30**, including lunch and breaks.
+See the [two-day timetable](00_Two_Day_Timetable.docx).
+
 ## Start here
 
 - [Course introduction](00_START_HERE.docx)
@@ -24,6 +27,31 @@ is not a substitute for Word/PowerPoint and may not follow local document links.
 - [Standalone Function and optional dummy website](Labs/VsCodePublishBasics/README.md)
 - [App Service / SQL sample](Labs/AppServiceSqlSample/README.md)
 - [Local document-processing tracker](Labs/LbsDocumentTracker/README.md)
+- [Day 2 operations: fictional cost/telemetry data and schema-specific KQL](Labs/Day2Operations/README.md)
+
+## Day 2 priorities
+
+Cost Management is a mandatory 75-minute investigation, followed by protected
+75-minute Application Insights and 75-minute KQL blocks. These use a realistic
+failed/slow-submission scenario, then a short standalone queue exercise, the
+local tracker and a team incident/cost handover.
+
+- [Mandatory cost lab](<Day 2/06_Cost_Management_Portal_Lab.docx>)
+- [Application Insights lab](<Day 2/02_Application_Insights_Portal_Lab.docx>)
+- [Three-level KQL lab](<Day 2/03_KQL_Beginner_Hands_On.docx>)
+- [Team incident and cost exercise](<Day 2/04_Incident_And_Cost_Team_Exercise.docx>)
+
+Each revised core lab includes prerequisites, permissions, duration, created
+resources, cost considerations, navigation, expected results, recovery, checks
+and cleanup. Budget **design** is mandatory; real creation needs approval.
+CI/CD and IaC remain awareness-only unless a separate tested runbook is supplied.
+
+Use the query directory matching the selected schema: workspace
+`AppRequests/AppDependencies`, or Application Insights `requests/dependencies`.
+Prepared queries contain fictional in-memory data, and offline CSV review is
+not KQL execution. Label live, prepared-query and offline evidence separately.
+Expected fixture arithmetic and result shapes have been checked locally; that
+does not establish Azure query execution, live collection or attendee access.
 
 The source includes beginner-friendly comments and explanations. The labs are
 separate component exercises unless a guide explicitly says otherwise. The
