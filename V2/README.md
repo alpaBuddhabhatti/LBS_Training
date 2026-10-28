@@ -1,7 +1,7 @@
 # Azure developer training - student pack V2
 
-This is the updated attendee edition. The older repository-root materials are
-retained for reference; use **this V2 pack** for the current two-day route.
+This is the updated attendee edition. Use **this V2 pack** for the current
+two-day route; earlier editions may have different instructions and schedules.
 
 Download or clone the whole repository and keep the V2 folder structure intact.
 Download Word, PowerPoint and PDF files before opening them; GitHub's file viewer
