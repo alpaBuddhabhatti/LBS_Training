@@ -1,0 +1,31 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<h1>Azure document dashboard</h1>
+<p>SQL stores each submission and its dispatch intent together. Azure Functions dispatches
+    work to Service Bus and validates the training format. Refresh to see updated status.</p>
+<p><strong>Completed</strong> is a format check, not identity verification or financial approval.</p>
+<p><a asp-page="/Upload">Submit a fictional document</a></p>
+@if (Model.Documents.Count == 0)
+{
+    <p>No documents submitted yet.</p>
+}
+else
+{
+    <table>
+        <thead><tr><th>Reference</th><th>Status</th><th>Submitted (UTC)</th><th></th></tr></thead>
+        <tbody>
+        @foreach (var document in Model.Documents)
+        {
+            <tr>
+                <td>@document.Reference</td>
+                <td>@document.Status</td>
+                <td>@document.CreatedAt.UtcDateTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                <td><a asp-page="/Documents/Details" asp-route-id="@document.Id">View status</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

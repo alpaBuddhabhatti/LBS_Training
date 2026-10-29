@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "AZURE_FUNCTIONS_ENVIRONMENT": "Development",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "Sql__Server": "firstsqlserver2026.database.windows.net",
+    "Sql__Database": "firstdb",
+    "ServiceBusConnection__fullyQualifiedNamespace": "fristazureservicebus.servicebus.windows.net",
+    "QueueName": "document-processing"
+  }
+}

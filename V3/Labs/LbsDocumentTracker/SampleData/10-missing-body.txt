@@ -1,0 +1,5 @@
+FictionalData: true
+Reference: LBS-DEMO-1010
+Applicant: Example Applicant Kappa
+DocumentType: ApplicationSummary
+

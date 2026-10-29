@@ -1,0 +1,22 @@
+// LIVE WORKSPACE SCOPE: replace the Application Insights resource ID, not workspace ID.
+let AppId = "YOUR-APPLICATION-INSIGHTS-RESOURCE-ID";
+let Requests = AppRequests
+| where TimeGenerated > ago(2h)
+| where _ResourceId =~ AppId
+| project TimeGenerated, Name, Success, ResultCode, DurationMs, OperationId;
+let Dependencies = AppDependencies
+| where TimeGenerated > ago(2h)
+| where _ResourceId =~ AppId
+| project TimeGenerated, Name, DependencyType, Target, Success, DurationMs, OperationId;
+Dependencies
+| where DurationMs > 1000
+| project TimeGenerated, DependencyName=Name, Target,
+    DependencySuccess=Success, DependencyMs=DurationMs, OperationId
+| join kind=leftouter (
+    Requests
+    | project OperationId, RequestName=Name, RequestSuccess=Success,
+        RequestMs=DurationMs, ResultCode
+) on OperationId
+| project TimeGenerated, OperationId, RequestName, ResultCode,
+    RequestSuccess, DependencyName, DependencySuccess, DependencyMs, RequestMs
+| order by DependencyMs desc

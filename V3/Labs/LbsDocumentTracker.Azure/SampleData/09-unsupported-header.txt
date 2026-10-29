@@ -1,0 +1,8 @@
+FictionalData: true
+Reference: LBS-DEMO-1009
+Applicant: Example Applicant Iota
+DocumentType: ApplicationSummary
+TrainingCategory: Demonstration
+
+This fictional training document deliberately includes an unsupported header.
+No real customer, account, address or financial information is included.

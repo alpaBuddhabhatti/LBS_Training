@@ -1,0 +1,6 @@
+FictionalData: true
+Reference: LBS-DEMO-1007
+DocumentType: ApplicationSummary
+
+This fictional training application deliberately omits the Applicant header.
+No real customer, account, address or financial information is included.

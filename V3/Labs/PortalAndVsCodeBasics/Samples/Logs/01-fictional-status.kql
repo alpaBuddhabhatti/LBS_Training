@@ -1,0 +1,8 @@
+// In-memory fictional rows: this does not ingest data or read Function telemetry.
+datatable(Reference:string, Status:string)
+[
+    "LBS-DEMO-1001", "Completed",
+    "LBS-DEMO-1002", "Needs review",
+    "LBS-DEMO-1003", "Received"
+]
+| order by Reference asc

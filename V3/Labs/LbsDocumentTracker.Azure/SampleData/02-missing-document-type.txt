@@ -1,0 +1,6 @@
+FictionalData: true
+Reference: LBS-DEMO-1002
+Applicant: Example Applicant Beta
+
+This fictional application deliberately omits DocumentType.
+Expected outcome: Needs review, not an infrastructure failure.

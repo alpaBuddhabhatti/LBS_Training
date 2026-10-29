@@ -1,0 +1,15 @@
+<Project Sdk="Azure.Functions.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Core\LbsDocumentTracker.Azure.Core.csproj" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="2.52.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.ServiceBus" Version="5.24.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Timer" Version="4.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="local.settings.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="Never" />
+    <Content Update="local.settings.example.json" CopyToOutputDirectory="Never" CopyToPublishDirectory="Never" />
+    <None Update="host.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="local.settings.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="Never" />
+    <None Update="local.settings.example.json" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+</Project>

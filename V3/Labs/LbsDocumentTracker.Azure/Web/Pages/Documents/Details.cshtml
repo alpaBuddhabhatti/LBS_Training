@@ -1,0 +1,29 @@
+@page "{id:guid}"
+@model DetailsModel
+@{
+    ViewData["Title"] = "Document status";
+}
+<h1>Document status</h1>
+@if (Model.Document is { } document)
+{
+    <dl>
+        <dt>Fictional reference</dt><dd>@document.Reference</dd>
+        <dt>Status</dt><dd>@document.Status</dd>
+        <dt>Submitted (UTC)</dt><dd>@document.CreatedAt.UtcDateTime.ToString("yyyy-MM-dd HH:mm:ss")</dd>
+        @if (document.CompletedAt is { } completed)
+        {
+            <dt>Finished (UTC)</dt><dd>@completed.UtcDateTime.ToString("yyyy-MM-dd HH:mm:ss")</dd>
+        }
+    </dl>
+    @if (document.ResultSummary is not null)
+    {
+        <p>@document.ResultSummary</p>
+    }
+    @if (document.CompletedAt is null)
+    {
+        <p>Awaiting Azure processing. Refresh this page to update.
+            Dispatch runs every 15 seconds; Function cold starts may take longer.
+            A prolonged Queued status requires checking the outbox, Function logs and dead-letter queue.</p>
+    }
+}
+<p><a asp-page="/Index">Back to dashboard</a></p>

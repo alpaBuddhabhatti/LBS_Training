@@ -1,0 +1,52 @@
+[
+  {
+    "file": "01-valid-application.txt",
+    "reference": "LBS-DEMO-1001",
+    "expectedStatus": "Completed"
+  },
+  {
+    "file": "02-missing-document-type.txt",
+    "reference": "LBS-DEMO-1002",
+    "expectedStatus": "Needs review"
+  },
+  {
+    "file": "03-reference-mismatch.txt",
+    "reference": "LBS-DEMO-1003",
+    "expectedStatus": "Needs review"
+  },
+  {
+    "file": "04-unsupported-document-type.txt",
+    "reference": "LBS-DEMO-1004",
+    "expectedStatus": "Needs review"
+  },
+  {
+    "file": "05-valid-supporting-statement.txt",
+    "reference": "LBS-DEMO-1005",
+    "expectedStatus": "Completed"
+  },
+  {
+    "file": "06-valid-application.txt",
+    "reference": "LBS-DEMO-1006",
+    "expectedStatus": "Completed"
+  },
+  {
+    "file": "07-missing-applicant.txt",
+    "reference": "LBS-DEMO-1007",
+    "expectedStatus": "Needs review"
+  },
+  {
+    "file": "08-duplicate-document-type.txt",
+    "reference": "LBS-DEMO-1008",
+    "expectedStatus": "Needs review"
+  },
+  {
+    "file": "09-unsupported-header.txt",
+    "reference": "LBS-DEMO-1009",
+    "expectedStatus": "Needs review"
+  },
+  {
+    "file": "10-missing-body.txt",
+    "reference": "LBS-DEMO-1010",
+    "expectedStatus": "Needs review"
+  }
+]

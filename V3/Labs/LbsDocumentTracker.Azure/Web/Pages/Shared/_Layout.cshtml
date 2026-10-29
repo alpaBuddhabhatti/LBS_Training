@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - LBS Azure Training</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <strong>LBS Document Tracker - Azure version</strong>
+        <nav><a asp-page="/Index">Dashboard</a> | <a asp-page="/Upload">Upload</a></nav>
+    </header>
+    <aside role="note">
+        LOCAL TRAINING UI - no sign-in. Fictional data only.
+        Records are stored in Azure SQL, not in memory. Do not expose this UI to a network.
+    </aside>
+    <main>@RenderBody()</main>
+</body>
+</html>

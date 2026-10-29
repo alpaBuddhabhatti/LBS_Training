@@ -1,0 +1,7 @@
+FictionalData: true
+Reference: LBS-DEMO-1006
+Applicant: Example Applicant Zeta
+DocumentType: ApplicationSummary
+
+This fictional application requests information about a training savings product.
+No real customer, account, address or financial information is included.

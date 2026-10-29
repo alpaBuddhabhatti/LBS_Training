@@ -1,0 +1,10 @@
+@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Request failed";
+}
+<h1>The request could not be completed</h1>
+<p>No successful operation is being reported. Check the terminal logs, SQL schema,
+    Entra database access and firewall configuration. Do not paste credentials into chat.</p>
+<p>Request ID: <code>@Model.RequestId</code></p>
+<p><a asp-page="/Index">Return to dashboard</a></p>

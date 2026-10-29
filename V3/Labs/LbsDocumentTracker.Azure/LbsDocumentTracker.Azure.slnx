@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Checks/">
+    <Project Path="Checks/LbsDocumentTracker.Azure.Checks.csproj" />
+  </Folder>
+  <Folder Name="/Core/">
+    <Project Path="Core/LbsDocumentTracker.Azure.Core.csproj" />
+  </Folder>
+  <Folder Name="/Functions/">
+    <Project Path="Functions/LbsDocumentTracker.Azure.Functions.csproj" />
+  </Folder>
+  <Folder Name="/Web/">
+    <Project Path="Web/LbsDocumentTracker.Azure.Web.csproj" />
+  </Folder>
+</Solution>

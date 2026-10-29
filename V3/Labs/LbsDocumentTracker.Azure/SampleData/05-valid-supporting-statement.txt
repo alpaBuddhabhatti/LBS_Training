@@ -1,0 +1,7 @@
+FictionalData: true
+Reference: LBS-DEMO-1005
+Applicant: Example Applicant Epsilon
+DocumentType: SupportingStatement
+
+This fictional supporting statement accompanies a training application.
+No real customer, account, address or financial information is included.

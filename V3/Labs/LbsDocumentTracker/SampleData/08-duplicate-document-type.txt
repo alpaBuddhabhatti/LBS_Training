@@ -1,0 +1,8 @@
+FictionalData: true
+Reference: LBS-DEMO-1008
+Applicant: Example Applicant Theta
+DocumentType: ApplicationSummary
+DocumentType: SupportingStatement
+
+This fictional training document deliberately repeats the DocumentType header.
+No real customer, account, address or financial information is included.

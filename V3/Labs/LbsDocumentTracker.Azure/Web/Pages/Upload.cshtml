@@ -1,0 +1,20 @@
+@page
+@model UploadModel
+@{
+    ViewData["Title"] = "Upload";
+}
+<h1>Submit a fictional document</h1>
+<p>Choose one of the ten files in this version's SampleData folder and match its reference.
+    UTF-8 .txt files only, maximum 32 KiB. No real or sensitive data.</p>
+<p>Document content is stored temporarily in Azure SQL and cleared when processing completes.
+    Metadata and results persist. Only document identifiers travel through Service Bus.</p>
+<div asp-validation-summary="ModelOnly" class="validation" role="alert"></div>
+<form method="post" enctype="multipart/form-data">
+    <label asp-for="Reference">Fictional reference</label>
+    <input asp-for="Reference" placeholder="LBS-DEMO-1001" autocomplete="off" />
+    <span asp-validation-for="Reference" class="validation"></span>
+    <label asp-for="Upload">Text file</label>
+    <input asp-for="Upload" type="file" accept=".txt,text/plain" />
+    <span asp-validation-for="Upload" class="validation"></span>
+    <p><button type="submit">Submit for Azure processing</button></p>
+</form>

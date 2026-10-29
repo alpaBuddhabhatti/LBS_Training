@@ -1,0 +1,4 @@
+FICTIONAL TRAINING DATA ONLY
+Reference: LBS-DEMO-1002
+Message: Uploaded from the VS Code terminal using Microsoft Entra sign-in.
+No customer or personal data is included.

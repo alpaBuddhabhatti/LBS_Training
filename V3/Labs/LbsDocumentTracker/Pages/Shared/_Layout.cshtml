@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - LBS Document Tracker</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    @* Shared navigation and the local-only warning appear on every page. *@
+    <header class="site-header">
+        <a class="brand" asp-page="/Index">LBS Document Tracker</a>
+        <nav aria-label="Main navigation">
+            <a asp-page="/Index">Dashboard</a>
+            <a asp-page="/Upload">Submit document</a>
+        </nav>
+    </header>
+    <div class="local-warning" role="note">
+        LOCAL DEVELOPMENT ONLY — in-memory demo, no sign-in, no Azure integration. Do not upload real or sensitive documents.
+    </div>
+    <main class="container">
+        @* Razor inserts the selected page's content here. *@
+        @RenderBody()
+    </main>
+    <footer>Fictional training application · local-only sample</footer>
+    @* Pages may add scripts, but the section is optional. *@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
