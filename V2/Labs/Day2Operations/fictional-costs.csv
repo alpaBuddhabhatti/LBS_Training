@@ -1,9 +1,0 @@
-Period,Service,Resource,Currency,Cost,Source
-Previous 7 days,App Service,web-fictional,GBP,100,FICTIONAL EXERCISE - NOT AZURE PRICING
-Previous 7 days,Azure SQL,sql-fictional,GBP,70,FICTIONAL EXERCISE - NOT AZURE PRICING
-Previous 7 days,Azure Monitor,monitor-fictional,GBP,20,FICTIONAL EXERCISE - NOT AZURE PRICING
-Previous 7 days,Storage,storage-fictional,GBP,10,FICTIONAL EXERCISE - NOT AZURE PRICING
-Current 7 days,App Service,web-fictional,GBP,100,FICTIONAL EXERCISE - NOT AZURE PRICING
-Current 7 days,Azure SQL,sql-fictional,GBP,70,FICTIONAL EXERCISE - NOT AZURE PRICING
-Current 7 days,Azure Monitor,monitor-fictional,GBP,80,FICTIONAL EXERCISE - NOT AZURE PRICING
-Current 7 days,Storage,storage-fictional,GBP,10,FICTIONAL EXERCISE - NOT AZURE PRICING

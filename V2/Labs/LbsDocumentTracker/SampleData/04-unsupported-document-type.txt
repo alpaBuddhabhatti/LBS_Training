@@ -1,7 +1,0 @@
-FictionalData: true
-Reference: LBS-DEMO-1004
-Applicant: Example Applicant Delta
-DocumentType: UnknownTrainingDocument
-
-This fictional file deliberately uses an unsupported document type.
-Expected outcome: Needs review.

@@ -1,8 +1,0 @@
-**/bin/
-**/obj/
-**/publish/
-**/local.settings.json
-.vs/
-*.user
-.env
-.copilot-azure/
