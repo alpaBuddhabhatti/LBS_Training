@@ -1,0 +1,23 @@
+// PREPARED FICTIONAL DATA: not collected Azure telemetry; no ingestion occurs.
+// Fixed historical timestamps are intentional. Set the portal time picker to include
+// 28 October 2026, 10:00-10:05 UTC; do not apply ago() to this prepared dataset.
+let Requests = datatable(TimeGenerated:datetime, Name:string, Success:bool,
+    ResultCode:string, DurationMs:real, OperationId:string)
+[
+    datetime(2026-10-28T10:00:00Z), "GET /health", true, "200", 120.0, "op-001",
+    datetime(2026-10-28T10:01:00Z), "GET /api/items", true, "200", 180.0, "op-002",
+    datetime(2026-10-28T10:02:00Z), "POST /documents", false, "500", 5200.0, "op-003",
+    datetime(2026-10-28T10:03:00Z), "GET /api/items", true, "200", 4800.0, "op-004",
+    datetime(2026-10-28T10:04:00Z), "GET /private-status", false, "401", 90.0, "op-005"
+];
+let Dependencies = datatable(TimeGenerated:datetime, Name:string, DependencyType:string,
+    Target:string, Success:bool, DurationMs:real, OperationId:string)
+[
+    datetime(2026-10-28T10:01:00Z), "Read items", "SQL", "fictional-sql", true, 80.0, "op-002",
+    datetime(2026-10-28T10:02:00Z), "Store status", "SQL", "fictional-sql", false, 5100.0, "op-003",
+    datetime(2026-10-28T10:03:00Z), "Read items", "SQL", "fictional-sql", true, 4600.0, "op-004"
+];
+Requests
+| where Success == false
+| project TimeGenerated, Name, ResultCode, DurationMs, OperationId
+| order by TimeGenerated asc

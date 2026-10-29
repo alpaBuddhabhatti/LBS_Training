@@ -1,0 +1,20 @@
+[
+  {
+    "reference": "LBS-DEMO-1001",
+    "document": "Fictional application summary",
+    "status": "Completed",
+    "summary": "Example format checks passed. This is not a financial approval."
+  },
+  {
+    "reference": "LBS-DEMO-1002",
+    "document": "Fictional supporting statement",
+    "status": "Needs review",
+    "summary": "Example missing document type. No actual processing is running."
+  },
+  {
+    "reference": "LBS-DEMO-1003",
+    "document": "Fictional application summary",
+    "status": "Received",
+    "summary": "Example received status. It will not change automatically."
+  }
+]

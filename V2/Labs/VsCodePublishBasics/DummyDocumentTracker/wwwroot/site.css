@@ -1,0 +1,15 @@
+:root { font-family: system-ui, sans-serif; color: #17364d; background: #f3f6fa; }
+body { margin: 0; }
+header { background: #123047; color: white; padding: 2rem max(1rem, calc((100% - 1050px) / 2)); }
+h1 { margin-bottom: 0; }
+main { max-width: 1050px; margin: 2rem auto; padding: 0 1rem; }
+aside { background: #fff3cd; border-left: 5px solid #ac7900; padding: 1rem; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: white; }
+caption { text-align: left; padding: .6rem 0; }
+th, td { padding: 1rem; border-bottom: 1px solid #c8d6e2; text-align: left; }
+th { background: #e3eef8; }
+button { background: #0067b1; color: white; border: 0; border-radius: .3rem; padding: .65rem; cursor: pointer; }
+button:focus-visible { outline: 3px solid #ac7900; outline-offset: 3px; }
+section { background: white; padding: 1rem; margin-top: 1.5rem; }
+footer { max-width: 1050px; margin: 2rem auto; padding: 1rem; }

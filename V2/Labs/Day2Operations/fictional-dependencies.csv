@@ -1,0 +1,4 @@
+TimeGenerated,Name,DependencyType,Target,Success,DurationMs,OperationId
+2026-10-28T10:01:00Z,Read items,SQL,fictional-sql,True,80,op-002
+2026-10-28T10:02:00Z,Store status,SQL,fictional-sql,False,5100,op-003
+2026-10-28T10:03:00Z,Read items,SQL,fictional-sql,True,4600,op-004

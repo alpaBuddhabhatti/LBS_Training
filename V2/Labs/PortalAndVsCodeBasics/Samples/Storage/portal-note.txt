@@ -1,0 +1,4 @@
+FICTIONAL TRAINING DATA ONLY
+Reference: LBS-DEMO-1001
+Message: Uploaded using the Azure portal.
+No customer or personal data is included.

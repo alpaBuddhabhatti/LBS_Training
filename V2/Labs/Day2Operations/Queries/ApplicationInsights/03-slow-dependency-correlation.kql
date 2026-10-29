@@ -1,0 +1,22 @@
+// LIVE APPLICATION INSIGHTS RESOURCE SCOPE: confirm this component in the portal.
+// In a shared/cross-resource scope, add the approved app filter before using this query.
+let Requests = requests
+| where timestamp > ago(2h)
+| project TimeGenerated=timestamp, Name=name, Success=success, ResultCode=resultCode,
+    DurationMs=duration / 1ms, OperationId=operation_Id;
+let Dependencies = dependencies
+| where timestamp > ago(2h)
+| project TimeGenerated=timestamp, Name=name, DependencyType=type, Target=target,
+    Success=success, DurationMs=duration / 1ms, OperationId=operation_Id;
+Dependencies
+| where DurationMs > 1000
+| project TimeGenerated, DependencyName=Name, Target,
+    DependencySuccess=Success, DependencyMs=DurationMs, OperationId
+| join kind=leftouter (
+    Requests
+    | project OperationId, RequestName=Name, RequestSuccess=Success,
+        RequestMs=DurationMs, ResultCode
+) on OperationId
+| project TimeGenerated, OperationId, RequestName, ResultCode,
+    RequestSuccess, DependencyName, DependencySuccess, DependencyMs, RequestMs
+| order by DependencyMs desc
